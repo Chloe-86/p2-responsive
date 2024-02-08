@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     font-size: 1rem;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -281,7 +281,7 @@ input[type='submit'] {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-
+    gap: 2.19rem;
 }
 
 .hebergements-and-populaires section {
@@ -345,7 +345,7 @@ input[type='submit'] {
     align-content: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 2.19rem;
+    
 }
 .hebergements-cards{
     display: grid;
@@ -391,6 +391,7 @@ input[type='submit'] {
 
 .activity-header__title{
     /* font-size: min(max(22px), 1.52vw); */
+    margin-top: 2.19rem;
 }
 
 .activity__body{
