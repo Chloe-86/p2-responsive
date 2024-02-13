@@ -16,13 +16,18 @@
 }
 
 body {
-  display: flex;
   justify-content: center;
 }
 
+body,
 .header,
 .header__ul,
-form,
+form, .loupe,
+.hebergements-and-populaires,
+.populaires-title,
+.populaires-cards .card,
+.populaires-cards .card-content,
+.hebergements,
 .search__filter-bar,
 .search,
 .search__button,
@@ -104,7 +109,6 @@ h4 {
 /* *******************************************************HEADER***************************************************************/
 .header {
   margin-bottom: 1.87rem;
-
   justify-content: space-between;
 }
 
@@ -121,7 +125,7 @@ h4 {
 .header__li {
   padding-top: 1rem;
 }
-* .header__a {
+.header__a {
   font-weight: 400;
   padding-top: 0.87rem;
 }
@@ -164,12 +168,12 @@ h4 {
 input::placeholder {
   color: var(--black-color);
 }
+
 form {
   border-radius: 0.9375rem;
   border: 1px solid var(--Grey, #f2f2f2);
   background: var(--White, #fff);
   max-width: 23.56rem;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   width: fit-content;
@@ -201,7 +205,7 @@ input[type="submit"] {
   cursor: pointer;
   border: none;
   font-weight: 700;
-  padding: 0.94rem 1rem;
+  padding: 1rem;
   font-size: 1.125rem;
 }
 
@@ -259,7 +263,6 @@ input[type="submit"] {
 
 .loupe {
   background-color: var(--main-color);
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.9375rem 1rem;
@@ -272,7 +275,6 @@ input[type="submit"] {
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
-  display: flex;
   justify-content: space-between;
   gap: 2.19rem;
 }
@@ -290,13 +292,11 @@ input[type="submit"] {
 }
 
 .populaires-title {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .populaires-cards .card {
-  display: flex;
   margin-top: 33px;
 }
 
@@ -310,7 +310,6 @@ input[type="submit"] {
 .populaires-cards .card-content {
   width: 67%;
   padding-left: 15px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
@@ -331,7 +330,6 @@ input[type="submit"] {
 /****** Hebergements ***********/
 .hebergements {
   width: 65%;
-  display: flex;
   gap: 1.88rem;
   align-content: center;
   justify-content: center;
@@ -424,6 +422,7 @@ input[type="submit"] {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
   .search__filter-bar {
     flex-direction: column;
     align-items: unset;
@@ -465,6 +464,7 @@ input[type="submit"] {
 
 /* Small devices (phones, less than 768px) */
 @media screen and (max-width: 767.98px) {
+
   .hebergements-and-populaires {
     flex-direction: column-reverse;
   }
