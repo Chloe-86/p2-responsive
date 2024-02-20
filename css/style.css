@@ -32,7 +32,6 @@ form,
 .search__filter-bar,
 .search,
 .search__button,
-.search__button_bar,
 .search__info,
 .activity__body,
 .footer__contact,
@@ -157,6 +156,10 @@ h4 {
 .search__description {
   font-weight: 400;
 }
+.search__button_bar{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
 /* DEBUT DU FORMULAIRE */
 .icon {
   border-radius: 15px 0px 0 15px;
@@ -179,7 +182,7 @@ form {
   max-width: 23.56rem;
   justify-content: space-between;
   align-items: center;
-  width: fit-content;
+  width: 100%;
 }
 
 input[type="search"] {
@@ -187,6 +190,7 @@ input[type="search"] {
   font-weight: 700;
   padding-left: 1.5rem;
   font-size: 1.125rem;
+  width: 100%;
 }
 
 input:focus {
@@ -242,7 +246,6 @@ input[type="submit"] {
   padding: 0 1.19rem;
   justify-content: center;
   align-items: center;
-  
 }
 
 .search__button p {
@@ -521,20 +524,30 @@ input[type="submit"] {
   }
 
   .search__button_bar {
-    flex-wrap: wrap;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
   }
-  .search__button{
-    flex:1;
+
+  .search__button {
+   padding: unset;
   }
+  
   .search__filter-bar {
     flex-direction: column;
     align-items: unset;
   }
-
+  form{
+    max-width: unset;
+  }
+  form .search-button{
+    background-color: var(--main-color);
+    border: none;
+  }
+  
   .searchhidden {
     display: none;
   }
+
   label.loupe {
     display: block;
   }
@@ -574,6 +587,4 @@ input[type="submit"] {
     font-size: 4vw;
     max-width: 10rem;
   }
-  
-  
 }
